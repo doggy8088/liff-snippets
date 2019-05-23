@@ -16,8 +16,12 @@ This extension contains a set of LIFF code snippets that helps LIFF app develope
 * `liff-openWindow`: Open a new window internally or externally.
 * `liff-closeWindow`: Close current LIFF app.
 
+### TypeScript-only snippets
+
+* `liff-tsd`: Generates TypeScript declaration files for LIFF JS SDK.
+
 ### HTML snippets
 
-* `liffsdk`: Insert LIFF SDK JS to HTML.
+* `liffsdk`: Insert LIFF JS SDK into HTML.
 
 **Enjoy!**

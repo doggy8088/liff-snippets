@@ -1,0 +1,9 @@
+{
+  "liffsdk": {
+    "prefix": "liffsdk",
+    "body": [
+      "<script src=\"https://d.line-scdn.net/liff/1.0/sdk.js\"></script>"
+    ],
+    "description": "LIFF SDK JS"
+  }
+}

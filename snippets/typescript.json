@@ -1,0 +1,91 @@
+{
+	"liff.init()": {
+		"prefix": "liff-init",
+		"body": [
+			"liff.init(data => {",
+			"  // https://developers.line.biz/en/reference/liff/#initialize-liff-app",
+			"  // data.language == \"zh-TW\"",
+			"  // data.context.type = utou | room | group | none",
+			"  // data.context.utouId",
+			"  // data.context.roomId",
+			"  // data.context.groupId",
+			"  // data.context.userId",
+			"  // data.context.viewType = compact | tall | full",
+			"  $1",
+			"},",
+			"err => {",
+			"  // LIFF initialization failed",
+			"  $2",
+			"});"
+		],
+		"description": ""
+	},
+	"liff.getProfile()": {
+		"prefix": "liff-getProfile",
+		"body": [
+			"liff.getProfile().then(profile => {",
+			"  // profile.userId",
+			"  // profile.displayName",
+			"  // profile.pictureUrl",
+			"  // profile.statusMessage",
+			"  $1",
+			"});"
+		],
+		"description": ""
+	},
+	"liff.sendMessages(TEXT)": {
+		"prefix": "liff-sendMessages",
+		"body": [
+			"liff.sendMessages([",
+			"  {",
+			"    type: 'text',",
+			"    text: '$1',",
+			"  }",
+			"]);"
+		],
+		"description": ""
+	},
+	"liff.sendMessages(IMAGE)": {
+		"prefix": "liff-sendMessages-image",
+		"body": [
+			"liff.sendMessages([",
+			"  {",
+			"    type: 'image',",
+			"    originalContentUrl: '$1',",
+			"    previewImageUrl: '$2'",
+			"  }",
+			"]);"
+		],
+		"description": ""
+	},
+	"liff.sendMessages(LOCATION)": {
+		"prefix": "liff-sendMessages-location",
+		"body": [
+			"liff.sendMessages([",
+			"  {",
+			"    type: 'location',",
+			"    title: '$1',",
+			"    address: '$2',",
+			"    latitude: ${3:25.0339639},",
+			"    longitude: ${4:121.5622835}",
+			"  }",
+			"]);"
+		],
+		"description": ""
+	},
+	"liff.openWindow()": {
+		"prefix": "liff-openWindow",
+		"body": [
+			"liff.openWindow({",
+			"  url: '${1:https://example.com}',",
+			"  external: '${2|false,true|}'",
+			"});"
+		],
+		"description": ""
+	},
+	"liff.closeWindow()": {
+		"prefix": "liff-closeWindow",
+		"body": "liff.closeWindow();",
+		"description": ""
+	}
+}

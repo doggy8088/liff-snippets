@@ -2,6 +2,11 @@
 
 All notable changes to the "liff-snippets" extension will be documented in this file.
 
+## 0.1.4 - 2019-05-25
+
+* Fix a bug in `liff-init-profile` JavaScript snippet.
+* Add `LIFFUserProfile` generic type on Promise to `liff-init-profile` snippet in TypeScript language.
+
 ## 0.1.3 - 2019-05-24
 
 * Fix a bug in `liff-tsd` snippet.

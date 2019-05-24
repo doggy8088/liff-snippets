@@ -15,15 +15,17 @@
 			"},",
 			"err => {",
 			"  // LIFF initialization failed",
+			"  // err.code;",
 			"  $2",
-			"});"
+			"});",
+			"$0"
 		],
 		"description": ""
 	},
 	"liff-init-profile": {
 		"prefix": "liff-init-profile",
 		"body": [
-			"new Promise(resolve => {",
+			"new Promise<${1:LIFFUserProfile}>(resolve => {",
 			"  liff.init(data => {",
 			"    // https://developers.line.biz/en/reference/liff/#initialize-liff-app",
 			"    // data.language == \"zh-TW\"",
@@ -39,13 +41,14 @@
 			"    // err.code;",
 			"  });",
 			"})",
-			".then((profile: any) => {",
+			".then((profile) => {",
 			"  // profile.userId",
 			"  // profile.displayName",
 			"  // profile.pictureUrl",
 			"  // profile.statusMessage",
-			"  $1",
-			"});"
+			"  $2",
+			"});",
+			"$0"
 		],
 		"description": ""
 	},
@@ -58,7 +61,8 @@
 			"  // profile.pictureUrl",
 			"  // profile.statusMessage",
 			"  $1",
-			"});"
+			"});",
+			"$0"
 		],
 		"description": ""
 	},
@@ -70,7 +74,8 @@
 			"    type: 'text',",
 			"    text: '$1',",
 			"  }",
-			"]);"
+			"]);",
+			"$0"
 		],
 		"description": ""
 	},
@@ -83,7 +88,8 @@
 			"    originalContentUrl: '$1',",
 			"    previewImageUrl: '$2'",
 			"  }",
-			"]);"
+			"]);",
+			"$0"
 		],
 		"description": ""
 	},
@@ -98,7 +104,8 @@
 			"    latitude: ${3:25.0339639},",
 			"    longitude: ${4:121.5622835}",
 			"  }",
-			"]);"
+			"]);",
+			"$0"
 		],
 		"description": ""
 	},
@@ -108,13 +115,17 @@
 			"liff.openWindow({",
 			"  url: '${1:https://example.com}',",
 			"  external: '${2|false,true|}'",
-			"});"
+			"});",
+			"$0"
 		],
 		"description": ""
 	},
 	"liff.closeWindow()": {
 		"prefix": "liff-closeWindow",
-		"body": "liff.closeWindow();",
+		"body": [
+			"liff.closeWindow();",
+			"$0"
+		],
 		"description": ""
 	},
 	"liff-tsd": {
@@ -271,7 +282,7 @@
 			"   */",
 			"  external: boolean",
 			"}",
-			""
+			"$0"
 		],
 		"description": "The TypeScript declaration files for LIFF JS SDK"
 	}

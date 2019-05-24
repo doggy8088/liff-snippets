@@ -39,7 +39,7 @@
 			"    // err.code;",
 			"  });",
 			"})",
-			".then((profile: any) => {",
+			".then((profile) => {",
 			"  // profile.userId",
 			"  // profile.displayName",
 			"  // profile.pictureUrl",
